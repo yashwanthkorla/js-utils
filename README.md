@@ -1,2 +1,1 @@
-# javascript-helper-functions
-Reusable and important helper functions and modules.
+# Few useful Javascript util function.
