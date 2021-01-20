@@ -9,6 +9,7 @@
     "lintFix": "tslint -p tsconfig.json",
     "prettierFix": "prettier --write \"src/**/*.ts\"",
     "test": "jest --config jestconfig.json",
+    "test:watch": "jest --watch",
     "prepare": "npm run build:app",
     "prepublishOnly": "npm test && npm run lintFix",
     "preversion": "npm run lintFix",
