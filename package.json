@@ -2,12 +2,18 @@
   "name": "js-utils",
   "version": "1.0.0",
   "description": "Few important util and helper functions",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build:app": "tsc",
     "lintFix": "tslint -p tsconfig.json",
     "prettierFix": "prettier --write \"src/**/*.ts\"",
-    "test": "jest --config jestconfig.json"
+    "test": "jest --config jestconfig.json",
+    "prepare": "npm run build:app",
+    "prepublishOnly": "npm test && npm run lintFix",
+    "preversion": "npm run lintFix",
+    "version": "npm run prettierFix && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -18,7 +24,11 @@
     "utils",
     "Javascript",
     "helper",
-    "functions"
+    "functions",
+    "js utils",
+    "javascript helper functions.",
+    "important",
+    "useful"
   ],
   "author": "Yashwanth korla <yashwanthkorla@gmail.com> (https://yashwanthkorla.com)",
   "license": "ISC",
