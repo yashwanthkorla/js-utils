@@ -14,7 +14,6 @@ describe('should return a new object', () => {
   });
 
   test('should return custom value on a non existing key', () => {
-    expect(useProxy(obj, "No key").test3).toStrictEqual("No key")
-  })
-
+    expect(useProxy(obj, 'No key').test3).toStrictEqual('No key');
+  });
 });

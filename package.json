@@ -52,7 +52,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettierFix && npm run lintFix && npm test"
+      "pre-commit": "npm run prettierFix && npm run lintFix && npm run test"
     }
   }
 }
