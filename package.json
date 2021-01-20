@@ -1,6 +1,6 @@
 {
   "name": "awesome-js-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Few important util and helper functions which you can use in your project",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -39,6 +39,7 @@
   "homepage": "https://github.com/yashwanthkorla/js-utils#readme",
   "devDependencies": {
     "@types/jest": "^26.0.20",
+    "husky": "^4.3.8",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "ts-jest": "^26.4.4",
@@ -48,5 +49,10 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettierFix && npm run lintFix && npm test"
+    }
+  }
 }
