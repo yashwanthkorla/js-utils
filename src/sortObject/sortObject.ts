@@ -46,7 +46,7 @@ export const sortObject = (obj: Record<string, number>) => {
      */
     const _frameObject = (sortedArrayObject: [string, string | number][]): SortObjectReturnType => {
         // can also achieve using reducer.
-        return sortedArrayObject.reduce((prev, [key, value]) => ({...prev, [key]: value}), {})
+        return sortedArrayObject.reduce((prev, [key, value]) => ({ ...prev, [key]: value }), {});
 
         /**
          * For now the node js below 12 version is not supporting the from entries so using reduce method instead of it.
