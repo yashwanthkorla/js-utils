@@ -1,3 +1,4 @@
 import { useProxy } from './useProxy';
+import { sortObject } from './sortObject';
 
-export { useProxy };
+export { useProxy, sortObject };
