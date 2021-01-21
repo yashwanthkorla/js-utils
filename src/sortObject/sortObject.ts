@@ -46,14 +46,16 @@ export const sortObject = (obj: Record<string, number>) => {
      */
     const _frameObject = (sortedArrayObject: [string, string | number][]): SortObjectReturnType => {
         // can also achieve using reducer.
-        // return sortedArrayObject.reduce((prev, [key, value]) => ({...prev, [key]: value}), {})
+        return sortedArrayObject.reduce((prev, [key, value]) => ({...prev, [key]: value}), {})
 
         /**
+         * For now the node js below 12 version is not supporting the from entries so using reduce method instead of it.
+         * Once available can enable the below code.
          * Below using es2019 feature i.e. Object.fromEntries.
          * This might be causing issue when you write a test file using jest.
          * To make it recognize add from entires to the object constructor. have a look at the test file of sortObject.
          */
-        return Object.fromEntries(sortedArrayObject);
+        // return Object.fromEntries(sortedArrayObject);
     };
 
     /**

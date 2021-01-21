@@ -1,11 +1,12 @@
 import { sortObject } from '../sortObject';
 
 describe('should check the functionality of sort object', () => {
-    beforeEach(() => {
-        Object.prototype.constructor.prototype.fromEntries = (enties: [string, string | number][]) => {
-            return enties.reduce((prev, [key, value]) => ({ ...prev, [key]: value }), {});
-        };
-    });
+    // Enable below code when object.from entries is used.
+    // beforeEach(() => {
+    //     Object.prototype.constructor.prototype.fromEntries = (enties: [string, string | number][]) => {
+    //         return enties.reduce((prev, [key, value]) => ({ ...prev, [key]: value }), {});
+    //     };
+    // });
 
     test('should sort the object based on the values', () => {
         const tempObj = { a: 1, b: 4, c: 2, d: 3 };
