@@ -5,9 +5,9 @@
  * @returns {Record<string, unknown>} An object with traps included, that is undefined being overwritten with 0.
  */
 export const useProxy = (obj: Record<string, unknown>, defaultReturnValue?: string | number): Record<string, unknown> =>
-  new Proxy(obj, {
-    get(target, key) {
-      if (key in target) return target[(key as unknown) as string];
-      return defaultReturnValue || 0;
-    },
-  });
+    new Proxy(obj, {
+        get(target, key) {
+            if (key in target) return target[(key as unknown) as string];
+            return defaultReturnValue || 0;
+        },
+    });

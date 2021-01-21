@@ -17,11 +17,11 @@ describe('should check the functionality of sort object', () => {
     });
 
     test('should sort the object based on the keys', () => {
-        const tempObj = {cat: 1, dog: 2, abc: 3}
-        const ascObj = {abc: 3, cat: 1, dog: 2}
-        const decObj = {dog: 2, cat: 1, abc: 3}
+        const tempObj = { cat: 1, dog: 2, abc: 3 };
+        const ascObj = { abc: 3, cat: 1, dog: 2 };
+        const decObj = { dog: 2, cat: 1, abc: 3 };
 
-        expect(sortObject(tempObj).byKey('ASC')).toStrictEqual(ascObj)
-        expect(sortObject(tempObj).byKey('DES')).toStrictEqual(decObj)
+        expect(sortObject(tempObj).byKey('ASC')).toStrictEqual(ascObj);
+        expect(sortObject(tempObj).byKey('DES')).toStrictEqual(decObj);
     });
 });

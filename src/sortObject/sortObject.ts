@@ -44,9 +44,7 @@ export const sortObject = (obj: Record<string, number>) => {
      * @param {[string, string | number][]} sortedArrayObject
      * @returns {SortObjectReturnType} the sorted object
      */
-    const _frameObject = (
-        sortedArrayObject: [string, string | number][],
-    ): SortObjectReturnType => {
+    const _frameObject = (sortedArrayObject: [string, string | number][]): SortObjectReturnType => {
         // can also achieve using reducer.
         // return sortedArrayObject.reduce((prev, [key, value]) => ({...prev, [key]: value}), {})
 
