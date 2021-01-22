@@ -4,6 +4,7 @@
 | ------------- |:-------------:|:-------------:|
 | useProxy     | https://github.com/yashwanthkorla/js-utils/blob/main/src/useProxy | Used to replace undefined with some value when the key is not present in the object
 | sortObject | https://github.com/yashwanthkorla/js-utils/blob/main/src/sortObject | used to sort out the object by key and value either ascending or descending.
+| isArrayNotEmpty | https://github.com/yashwanthkorla/js-utils/blob/main/src/isArrayNotEmpty | util to check whether the variable passed is valid array and has some length
 
 ## Using npm
 
