@@ -4,5 +4,14 @@ import { isArrayNotEmpty } from './isArrayNotEmpty';
 import { isObjectNotEmpty } from './isObjectNotEmpty';
 import { removeDuplicatesFromArray } from './removeDuplicatesFromArray';
 import { capitalizeString } from './capitalizeString';
+import { joinClassNames } from './joinClassNames';
 
-export { useProxy, sortObject, isArrayNotEmpty, isObjectNotEmpty, removeDuplicatesFromArray, capitalizeString };
+export {
+    useProxy,
+    sortObject,
+    isArrayNotEmpty,
+    isObjectNotEmpty,
+    removeDuplicatesFromArray,
+    capitalizeString,
+    joinClassNames,
+};
