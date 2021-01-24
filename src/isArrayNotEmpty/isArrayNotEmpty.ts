@@ -1,8 +1,8 @@
 /**
  * Function to check whether a variable is array and has some length.
- * 1. If empty array it will return false.
+ * If empty array it will return false.
  * @function
  * @param {unknown} arr - array
- * @returns {boolean}
+ * @returns {boolean} tells whether array has elements in it or not.
  */
 export const isArrayNotEmpty = (arr: unknown): boolean => Array.isArray(arr) && !!arr.length;
