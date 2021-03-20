@@ -1,6 +1,6 @@
 {
   "name": "awesome-js-utils",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Few important util and helper functions which you can use in your project",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

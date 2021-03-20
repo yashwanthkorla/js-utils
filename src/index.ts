@@ -5,6 +5,7 @@ import { isObjectNotEmpty } from './isObjectNotEmpty';
 import { removeDuplicatesFromArray } from './removeDuplicatesFromArray';
 import { capitalizeString } from './capitalizeString';
 import { joinClassNames } from './joinClassNames';
+import { getKeyValues } from './getKeyValues';
 
 export {
     useProxy,
@@ -14,4 +15,5 @@ export {
     removeDuplicatesFromArray,
     capitalizeString,
     joinClassNames,
+    getKeyValues,
 };
