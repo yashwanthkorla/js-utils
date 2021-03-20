@@ -6,6 +6,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build:app": "tsc",
+    "build": "npm run prettierFix && npm run lintFix && npm run build:app",
     "lintFix": "tslint -p tsconfig.json",
     "prettierFix": "prettier --write \"src/**/*.ts\"",
     "test": "jest --config jestconfig.json",
