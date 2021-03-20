@@ -1,8 +1,8 @@
 /**
  * Function to extract values of the keys from the given obj
- * 
+ *
  * Ex:
- * 
+ *
  * const a = {
  *    a : {
  *      c: 'd',
@@ -12,15 +12,15 @@
  *      a: 'b'
  *    }
  * }
- * 
+ *
  * usage:
- * 
+ *
  * * getKeyValues(a, [ [ 'a', 'c' ] ] ) - will return d - single value
  * * getKeyValues(a, [ { 'a' : [ 'c', 'e' ] } ]) - will return [['d', 'f']]
- * 
+ *
  * Usage in code:
  * const [[firstValue, secondValue]] = getKeyValues(a, [{'a': ['c', 'e']}])
- * 
+ *
  * @author - "Yashwanth korla"
  * @param mainObj - Object on which you want to extract the values based on keys.
  * @param objKeys - array of keys or object of keys.
@@ -30,12 +30,11 @@ export const getKeyValues = (
     mainObj: Record<string, unknown>,
     objKeys: (string[] | Record<string, string[]>)[],
 ): unknown[] => {
-
     /**
      * Function to extract multiple keys when data is sent as an array of objects.
      * @param obj
-     * @param mainKey 
-     * @param currentValue 
+     * @param mainKey
+     * @param currentValue
      * @return array of values
      */
     const _extractMultipleValues = (
@@ -43,16 +42,18 @@ export const getKeyValues = (
         mainKey: string,
         currentValue: Record<string, string[]>,
     ): unknown[] => {
-        return currentValue?.[mainKey]?.map((key: string) => {
-            const mainKeyObject = obj?.[mainKey] as Record<string, unknown>
-            return mainKeyObject?.[key] || ''
-        }) || [];
+        return (
+            currentValue?.[mainKey]?.map((key: string) => {
+                const mainKeyObject = obj?.[mainKey] as Record<string, unknown>;
+                return mainKeyObject?.[key] || '';
+            }) || []
+        );
     };
 
     /**
      * Function to extract multiple keys when data is sent as an array of array's
-     * @param obj 
-     * @param array 
+     * @param obj
+     * @param array
      * @return array of values
      */
     const _extractSingleValue = (obj: Record<string, unknown>, array: string[]): string => {
